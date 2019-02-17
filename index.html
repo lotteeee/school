@@ -1,0 +1,169 @@
+<h<!DOCTYPE html>
+<html>
+	<head>
+		<title>SpaceX</title>
+		<link rel="stylesheet" type="text/css" href="challenge1goeie.css">
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	   <script type="text/javascript">
+	      google.charts.load('current', {'packages':['gauge']});
+	      google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+
+	        var data = google.visualization.arrayToDataTable([
+	          ['Label', 'Value'],
+	          ['Gasoline', 80],
+	          ['Kelvin', 55],
+	          ['Fahrenheit', 68]
+	        ]);
+
+	        var options = {
+	          width: 600, height: 270,
+	          redFrom: 90, redTo: 100,
+	          yellowFrom:65, yellowTo: 100,
+	          minorTicks: 5
+	        };
+
+	        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+	        chart.draw(data, options);
+
+	        setInterval(function() {
+	          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+	          chart.draw(data, options);
+	        }, 13000);
+	        setInterval(function() {
+	          data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+	          chart.draw(data, options);
+	        }, 5000);
+	        setInterval(function() {
+	          data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+	          chart.draw(data, options);
+	        }, 26000);
+	      }
+	      // media queries voor javascript??????
+	  //     function myFunction(x) {
+			//   if (x.matches) { // If media query matches
+			//     options.style.width = "400px";
+			//   } else {
+			//     document.body.style.backgroundColor = "pink";
+			//   }
+			// }
+
+			// var x = window.matchMedia("(mix-width: 2000px)")
+			// myFunction(x) // Call listener function at run time
+			// x.addListener(myFunction) // Attach listener function on state changes
+			// https://jsfiddle.net/api/post/library/pure/
+	    </script>
+	</head>
+	<body>
+		<header>
+			<img src="spacexlogo.png">
+			<div class="nav flex-container">
+				<div class="flex-item box2 flex-hidden"><h2><a href="#">FALCON 9<a></h2></div>
+        		<div class="flex-item box3 flex-hidden"><h2><a href="#">FALCON HEAVY</a></h2></div>
+        		<div class="flex-item box4 flex-hidden"><h2><a href="#">DRAGON</a></h2></div>
+        		<div class="flex-item box5 flex-hidden"><h2><a href="#">UPDATES</a></h2></div>
+        		<div class="spaceship gridcontainer4">
+					<img class="space griditem" src="Spaceship.png">
+				</div>
+			</div>
+		</header>	
+		
+			<div class="gridcontainer">
+				<div class="box box1">
+					<div class="flex-container ">
+							<div class="flex-item">
+								<p>CHANGE OF VISITING SPACECRAFT IN 21 CENTURY</p> 
+							</div>
+						</div>
+					<div class="flex-container">
+						<p>PLUTO...</p>
+						<div class="container flex-item">
+						  <div class="skills drie">15%</div>
+					</div>
+				</div>
+				<div class="flex-container">
+					<p>VENUS...</p>
+					<div class="container flex-item">
+					  <div class="skills vier">42%</div>
+					</div>
+				</div>
+				<div class="flex-container">
+					<p>JUPITER</p>
+					<div class="container flex-item">
+					  <div class="skills vijf">65%</div>
+					</div>
+				</div>
+				<div class="flex-container">
+					<p>SATURN</p>
+					<div class="container flex-item">
+					  <div class="skills zes">74%</div>
+					</div>
+				</div>
+				<div class="flex-container">
+					<p>MARS....</p>
+					<div class="container flex-item">
+					<div class="skills zeven">62%</div>
+					</div>
+				</div>
+			</div>
+			<div id='container' class="box box2"></div>
+			<script type="text/javascript"> 	
+				Highcharts.chart('container', {
+					 title: {
+					    text: 'Afstand afgelegd per jaar - FALCON 9'
+					  },
+
+					  yAxis: {
+					    title: {
+					      text: 'Afstand in Km'
+					    }
+					  },
+					  legend: {
+					    layout: 'vertical',
+					    align: 'right',
+					    verticalAlign: 'middle'
+					  },
+
+					  plotOptions: {
+					    series: {
+					      label: {
+					        connectorAllowed: false
+					      },
+					      pointStart: 2012
+					    }
+					  },
+
+					  series: [{
+					    data: [43934, 52503, 57177, 69658, 77031, 99931, 111133, 124175]
+					
+					  }],
+
+					  responsive: {
+					    rules: [{
+					      condition: {
+					        maxWidth: 600
+					      },
+					      chartOptions: {
+					        legend: {
+					          layout: 'horizontal',
+					          align: 'center',
+					          verticalAlign: 'bottom'
+					        }
+					      }
+					    }]
+					  }
+					});
+		 </script>
+			
+			<div id='container3' class="box box3">
+				<div id="chart_div";"></div>
+			</div>
+			
+		</div>
+	<body>
+</html>
+
+	
