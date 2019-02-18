@@ -83,12 +83,15 @@ a:hover {
 }
 	.box1 {
 		margin: 20px;
+		border-radius: 5px;
 	}
 	.box2 {
 		margin: 20px;
+		border-radius: 5px;
 	}
 	.box3 {
 		margin: 20px;
+		border-radius: 5px;
 	}	
 
 .skills {
@@ -104,7 +107,7 @@ a:hover {
 .zeven {width: 427px; background-color: #ccac55; font-family: 'Arial', 'sans-serif';} /* Dark Grey */
 
 #chart_div{
-  width: 50%; 
+  width: 62%; 
   height: auto;
   padding: 10px;
   margin: auto;
@@ -115,6 +118,7 @@ a:hover {
 }
 .container1 {
 	background-color: white;
+
 }
 .container2 {
 	background-color: white;
